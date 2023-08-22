@@ -1,6 +1,8 @@
 <?php
+use App\Http\Controllers\FormAddNewCardController;
 
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +23,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::resource('formAddNewCard', FormAddNewCardController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
+    
 require __DIR__.'/auth.php';
