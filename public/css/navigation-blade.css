@@ -1,0 +1,12 @@
+.nav-bar-container{
+    height: 9rem;
+    background-color: white;
+    width: 90%;
+    height: 94px;
+    margin-left: 2vw;
+    margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #0079FF solid 0.5px;
+}
+    

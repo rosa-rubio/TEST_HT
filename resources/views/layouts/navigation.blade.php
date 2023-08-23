@@ -1,8 +1,22 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Primary Navigation Menu Dashboard -->
+    <div class="nav-bar-container">
         <div class="flex justify-between h-16">
-            <div class="flex">
+            
+        <a href="{{ url('/') }}"> <img class = "logo" src="{{ asset('assets/Logo.svg') }}"></a> 
+
+<div class = "nav-bar-right-div">
+     <!-- Search Input -->
+     <div class = "nav-bar-search-input-container">
+       <form class="search-input" action="search.php" method="GET">
+            <input class="search" placeholder = "Search..." type="text" name="query">
+            <button value='Search' class="search-button" type="submit"><img src= "{{ asset('assets/Glass-icon.svg') }}"></button>
+        </form>
+    </div>
+
+
+
+
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
