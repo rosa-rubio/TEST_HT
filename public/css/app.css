@@ -34,8 +34,8 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
-  font-feature-settings: normal; /* 5 */
+font-family: 'Jaldi', sans-serif;  
+font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
 }
 
@@ -74,7 +74,7 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -82,7 +82,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
-}
+} */
 
 /*
 Reset links to optimize for opt-in styling instead of opt-out.
@@ -371,15 +371,6 @@ object {
   vertical-align: middle; /* 2 */
 }
 
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 [hidden] {
@@ -791,6 +782,12 @@ select {
 }
 .w-full {
   width: 100%;
+}
+.w-75{
+  width: 75%;
+}
+.w-50 {
+  width: 50%;
 }
 .max-w-6xl {
   max-width: 72rem;
@@ -1326,6 +1323,98 @@ select {
 .disabled\:opacity-25:disabled {
   opacity: 0.25;
 }
+
+/* details page styles */
+:root {
+  --primary-color: rgba(0, 121, 255, 1);
+  --button-accept: rgba(0, 223, 162, 1);
+  --button-cancel: rgba(255, 0, 96, 1);
+  --background-color: rgba(251, 253, 206, 1);
+}
+.image-container {
+  width: 50%;
+  padding-bottom: 50%;
+  position: relative;
+  border-radius: 1.5em;
+  overflow: hidden;
+}
+
+.img-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  align-items: flex-start;
+}
+.flex-icons{
+    gap: 1em;
+}
+.title-details{
+  color: var(--button-cancel);
+}
+.location-details {
+  color: var(--button-cancel);
+  font-weight: 400;
+}
+.head-details{
+  padding: 1em 0 2em 0;
+}
+.description-details {
+  color: var(--primary-color);
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+.modal-body{
+  background-color: var(--background-color);
+}
+.modal-body p{
+  color: var(--primary-color);
+  text-align: center;
+  padding: 2em 0 1em 0;
+}
+.buttons{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1em;
+color: white;
+padding-bottom: 1em;
+}
+.btn-accept{
+  background-color: var(--button-accept);
+}
+.btn-cancel {
+  background-color: var(--button-cancel);
+}
+.button{
+  width: 6em;
+  padding: 0.4em 0;
+}
+div.modal-width{
+  width: 400px;
+  margin-top: 10em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media (prefers-color-scheme: dark) {
 
   .dark\:border-gray-700 {
