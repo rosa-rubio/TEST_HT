@@ -17,7 +17,9 @@ class CreateFormAddNewCardsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('description');
-
+            $table->string('title');
+            $table->string('location');
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -13,6 +13,9 @@ class FormAddNewCard extends Model
 
         protected $fillable = [
         'description',
+        'title',
+        'location',
+        'image',
     ];
     public function user(): BelongsTo
     {
