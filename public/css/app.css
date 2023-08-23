@@ -328,14 +328,13 @@ textarea {
 
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1; /* 1 */
-  color: #9ca3af; /* 2 */
+  color: var(--primary-color);
 }
 
 input::placeholder,
 textarea::placeholder {
   opacity: 1; /* 1 */
-  color: #9ca3af; /* 2 */
-}
+color: var(--primary-color);}
 
 /*
 Set the default cursor for buttons.
@@ -381,10 +380,9 @@ object {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #fff;
-  border-color: #6b7280;
-  border-width: 1px;
-  border-radius: 0px;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 1em;
   padding-top: 0.5rem;
   padding-right: 0.75rem;
   padding-bottom: 0.5rem;
@@ -404,17 +402,14 @@ object {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  border-color: #2563eb;
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #6b7280;
-  opacity: 1;
+  color: var(--primary-color);
 }
 
 input::placeholder,textarea::placeholder {
-  color: #6b7280;
-  opacity: 1;
+  color: var(--primary-color);
 }
 
 ::-webkit-datetime-edit-fields-wrapper {
@@ -530,16 +525,16 @@ select {
 
 [type='file'] {
   background: unset;
-  border-color: inherit;
+  border-color: var(--background-color);
   border-width: 0;
-  border-radius: 0;
+  border-radius: 50%;
   padding: 0;
   font-size: unset;
   line-height: inherit;
 }
 
 [type='file']:focus {
-  outline: 1px auto -webkit-focus-ring-color;
+  outline: none;
 }
 
 *, ::before, ::after {
@@ -1386,7 +1381,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 1em;
-color: white;
 padding-bottom: 1em;
 }
 .btn-accept{
@@ -1397,18 +1391,100 @@ padding-bottom: 1em;
 }
 .button{
   width: 6em;
+  color: white;
   padding: 0.4em 0;
+  font-weight: 700;
 }
 div.modal-width{
   width: 400px;
   margin-top: 10em;
 }
+/* form edit card styles */
+
+form.form{
+  border: 0.2em solid var(--background-color);
+  border-radius: 1em;
+  padding: 2em;
+  background-color: white;
+  width: 65%;
+  margin: 0 auto;
+}
+
+form a
+{
+  text-decoration: none;
+  color: inherit;
+}
+.box-line{
+  width: 100%;
+  border-bottom: 1px red solid;
+}
+.box-line h3{
+color: var(--button-cancel);
+text-align: center;
+font-weight: 700;
+}
+.form label {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.1em;
+    margin-top: 2em;
+}
+.box-half{
+  width: 50%;
+}
+form input, textarea{
+  color: var(--primary-color);
+  border-radius: 2em !important;
+  padding: 1em;
+    line-height: 2em !important;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25) inset;
+    width: 100%;
+}
+form.form textarea{
+      box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25) inset !important;
+}
+textarea{
+  padding: 1em;
+  line-height: 2em !important;
+}
+form input[type="text"]{
+  padding-left: 1em !important;
+}
+form input[type="file"] {
+  margin: 2em 0;
+}
+.buttons-end{
+  margin-top: 7em;
+  display: flex;
+  gap: 1em;
+}
 
 
-
-
-
-
+.flexbox-file{
+display: flex;
+width: 100%;
+cursor: pointer;
+}
+label>input[type="file"]{
+  cursor: pointer;
+}
+.file{
+  background-color:  var(--primary-color);
+  padding: 0.65em 1em;
+  border-radius: 2em 0 0 2em;
+}
+.file-text{
+  background-color: var(--background-color);
+  padding: 0.6em;
+  font-weight: 400;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 0 2em 2em 0;
+  padding-right: 7.5em;
+}
+input.hidden {
+  display: none;
+}
 
 
 
