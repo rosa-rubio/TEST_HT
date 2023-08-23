@@ -11,10 +11,6 @@ use Illuminate\View\View;
 
 class FormAddNewCardController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     */
     public function index(): View
     {
                  return view('formAdd', [
@@ -27,7 +23,13 @@ class FormAddNewCardController extends Controller
             'form_add_new_cards' => FormAddNewCard::with('user')->latest()->get(),
         ]);
     }
-    
+    public function details(FormAddNewCard $formAddNewCard): View
+{
+    return view('details', [
+        'form_add_new_card' => $formAddNewCard,
+    ]);
+}
+
     /**
      * Show the form for creating a new resource.
      *

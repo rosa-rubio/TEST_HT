@@ -25,7 +25,11 @@ Route::get('/', [CardController::class, 'index'])->name('cards');
 Route::get('/dashboard', [FormAddNewCardController::class, 'dashboard'])
     ->middleware(['auth'])
     ->name('dashboard');
-
+    
+Route::get('/details/{formAddNewCard}', [FormAddNewCardController::class, 'details'])
+    ->middleware(['auth'])
+    ->name('details');
+    
 Route::resource('formAddNewCard', FormAddNewCardController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
