@@ -1,4 +1,6 @@
 <x-guest-layout>
+    <link href="{{ asset('css/Register.css') }}" rel="stylesheet">
+
 
 
     <!-- Validation Errors -->
