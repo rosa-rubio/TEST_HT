@@ -38,10 +38,10 @@
         <div class="flex items-center justify-end mt-4">
             <div class="flex items-center justify-end mt-4">
 
-                <x-button class="ml-4">
+                <button class="ml-4 btn-register" >
                     {{ __('Aceptar') }}
-                </x-button>
-                <button class="ml-3">
+                </button>
+                <button class="ml-4 btn-aceptar" >
                     <a href="/">
                         Cancelar
                     </a>
@@ -49,7 +49,7 @@
             </div>
 
         </div>
-        <p>¿Ya tienes cuenta? Accede
+        <p class= "p2">¿Ya tienes cuenta? Accede
             <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                 {{ __('aqui') }}
             </a>

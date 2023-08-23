@@ -1,13 +1,44 @@
+*{
+    --color--azul:0079FF;
+}
+
+
+
 .underline{
+     text-align: center;
+     margin-top: 40px;
+     border-bottom: solid #ff0060;
     
   
 }
 form{
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    justify-content: center; 
+    align-items: center;
+    margin-top: 20px; 
 }
-input{
+label{
+    text-align: left;
+    color: #0079ff;
   
+}
+.btn-register{
+   background-color: #00dfa2;
+
+}
+.btn-aceptar{
+    background-color: #ff0060;
+}
+button{
+    border-radius: 20px;
+    color: #fbfdce;  
+}
+.p2{
+color:#0079ff;
+}
+
+a{
+    text-decoration: none;
+    color: #00dfa2;
 }
