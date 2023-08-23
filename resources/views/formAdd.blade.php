@@ -21,8 +21,8 @@
                 <x-input id="image" class="block mt-1 w-full" type="file" name="image" required
                     placeholder="Sube una imagen" />
             </div>
-            <textarea name="description" placeholder="¿Por qué quieres viajar allí?"
-                class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">{{ old('message') }}</textarea>
+            <textarea name="description" placeholder="¿Por qué quieres viajar allí?" maxlength="500"
+                class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">{{ old('description') }}</textarea>
             <x-button class="ml-4">
                 {{ __('Aceptar') }}
             </x-button>
