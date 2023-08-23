@@ -1,19 +1,22 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav class ='nav' x-data="{ open: false }" >
     <!-- Primary Navigation Menu Dashboard -->
     <div class="nav-bar-container">    
         <a href="{{ url('/dashboard') }}"> <img class = "logo" src="{{ asset('assets/Logo.svg') }}"></a> 
 
-        <div class = "nav-bar-right-div">
+        <div class = "dashboard-nav-bar-right-div">
+
+        <div class = 'dashboard-search-container'>
         <!-- Search Input -->
-            <div class = "nav-bar-search-input-container">
             <form class="search-input" action="search.php" method="GET">
                 <input class="search" placeholder = "Search..." type="text" name="query">
                 <button value='Search' class="search-button" type="submit"><img src= "{{ asset('assets/Glass-icon.svg') }}"></button>
+                
             </form>
-        </div>
-
-         <!-- Navigation Links -->
-         <div class="dashboard-nav-link-container">
+            </div>
+            
+        
+            <!-- Navigation Links -->
+            <div class="dashboard-nav-link-container">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         <img src="{{ asset('assets/Home-icon.svg') }}" alt="">
                         <!--{{ ('Pepito') }}-->
@@ -31,14 +34,10 @@
                         </form>
 
                 </div>
-
-
-
-
-                
-
                
             </div>
+
+        </div>
 
             <!-- Settings Dropdown 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
