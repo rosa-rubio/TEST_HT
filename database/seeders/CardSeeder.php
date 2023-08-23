@@ -16,14 +16,28 @@ class CardSeeder extends Seeder
      */
     public function run()
     {
-        /*Card::create([
-            'image' => 'https://www.mondosonoro.com/wp-content/uploads/2020/10/Woodkid-S16-disco.jpg',
-            'title' => 'Fun Vacation',
-            'location' => 'Puerto Rico',
-            'description' => 'Playa, sol y Arena'
-        ]);*/
 
         $cards = [
+            [
+                'image' => 'https://upload.wikimedia.org/wikipedia/commons/2/23/Garita_morro_s.jpg',
+                'title' => 'Fun Vacation',
+                'location' => 'Puerto Rico',
+                'description' => 'Playa, sol y Arena'
+            ],
+            
+            [
+                'image' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Everest_kalapatthar.jpg/800px-Everest_kalapatthar.jpg',
+                'title' => 'Extreme travel',
+                'location' => 'Everest',
+                'description' => 'Snow and sport'
+            ],
+
+            [
+                'image' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/The_Leaning_Tower_of_Pisa_SB.jpeg/800px-The_Leaning_Tower_of_Pisa_SB.jpeg',
+                'title' => 'Romantic Vacation',
+                'location' => 'Italia',
+                'description' => 'Pizza, ice cream'
+            ],
             [
                 'image' => 'https://s1.abcstatics.com/media/viajar/2018/04/25/massai-mara-U10111949550xbH--510x349@abc.jpg',
                 'title' => 'Safari de aventura',
@@ -59,7 +73,7 @@ class CardSeeder extends Seeder
                 'description' => 'Despertarse con el runrún del mar en su idílico bungaló en las Maldivas dará vida a la realidad tropical'
             ],
             [
-                'image' => 'https://es.wikipedia.org/wiki/Salto_%C3%81ngel#/media/Archivo:SaltoAngel1.jpg',
+                'image' => 'https://ospreyexpeditions.com/wp-content/uploads/2021/09/Angel-Falls-Orinoco-Delta-Venezuela-Tours-Wanderreds-Isla-Margarita-2-e1632625651636.jpg',
                 'title' => 'Salto Angel, una maravilla natural',
                 'location' => 'Venezuela',
                 'description' => 'El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir'
