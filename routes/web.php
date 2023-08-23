@@ -15,12 +15,12 @@ use App\Http\Controllers\CardController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-Route::get('/cards', [CardController::class, 'index'])->name('cards');
+Route::get('/', [CardController::class, 'index'])->name('cards');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
