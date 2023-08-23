@@ -20,9 +20,14 @@ class FormAddNewCardController extends Controller
                  return view('formAdd', [
             'form_add_new_cards' => FormAddNewCard::with('user')->latest()->get(),
         ]);
-
     }
-
+    public function dashboard(): View
+    {
+                 return view('dashboard', [
+            'form_add_new_cards' => FormAddNewCard::with('user')->latest()->get(),
+        ]);
+    }
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -42,8 +47,14 @@ class FormAddNewCardController extends Controller
     {
                 $validated = $request->validate([
             'description' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
- 
+     $imagePath = $request->file('image')->store('images', 'public');
+
+        $validated['image'] = $imagePath;
+
         $request->user()->form_add_new_cards()->create($validated);
  
         return redirect(route('dashboard'));
@@ -90,7 +101,14 @@ class FormAddNewCardController extends Controller
  
         $validated = $request->validate([
             'description' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif', 
         ]);
+     if ($request->hasFile('image')) {
+        $imagePath = $request->file('image')->store('images', 'public');
+        $validated['image'] = $imagePath;
+    }
  
         $formAddNewCard->update($validated);
  

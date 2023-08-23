@@ -22,14 +22,12 @@ use App\Http\Controllers\CardController;
 
 Route::get('/', [CardController::class, 'index'])->name('cards');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
+Route::get('/dashboard', [FormAddNewCardController::class, 'dashboard'])
+    ->middleware(['auth'])
+    ->name('dashboard');
 
 Route::resource('formAddNewCard', FormAddNewCardController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
     
 require __DIR__.'/auth.php';
-
