@@ -1,43 +1,46 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu Dashboard -->
-    <div class="nav-bar-container">
-        <div class="flex justify-between h-16">
-            
-        <a href="{{ url('/') }}"> <img class = "logo" src="{{ asset('assets/Logo.svg') }}"></a> 
+    <div class="nav-bar-container">    
+        <a href="{{ url('/dashboard') }}"> <img class = "logo" src="{{ asset('assets/Logo.svg') }}"></a> 
 
-<div class = "nav-bar-right-div">
-     <!-- Search Input -->
-     <div class = "nav-bar-search-input-container">
-       <form class="search-input" action="search.php" method="GET">
-            <input class="search" placeholder = "Search..." type="text" name="query">
-            <button value='Search' class="search-button" type="submit"><img src= "{{ asset('assets/Glass-icon.svg') }}"></button>
-        </form>
-    </div>
+        <div class = "nav-bar-right-div">
+        <!-- Search Input -->
+            <div class = "nav-bar-search-input-container">
+            <form class="search-input" action="search.php" method="GET">
+                <input class="search" placeholder = "Search..." type="text" name="query">
+                <button value='Search' class="search-button" type="submit"><img src= "{{ asset('assets/Glass-icon.svg') }}"></button>
+            </form>
+        </div>
 
-
-
-
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
-                    </a>
-                </div>
-
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+         <!-- Navigation Links -->
+         <div class="dashboard-nav-link-container">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        <img src="{{ asset('assets/Home-icon.svg') }}" alt="">
+                        <!--{{ ('Pepito') }}-->
                     </x-nav-link>
                     <x-nav-link :href="route('formAddNewCard.index')"
                         :active="request()->routeIs('formAddNewCard.index')">
-                        Add New
+                        <img src="{{ asset('assets/Create-icon.svg') }}" alt="">
                     </x-nav-link>
+                    <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                     <x-nav-link :href="route('logout')" onclick="event.preventDefault();
+                                                this.closest('form').submit();"> <img src="{{ asset('assets/Logout-icon.svg') }}" alt="">
+                                <!--{{ __('Log Out') }}-->
+                    </x-nav-link>
+                        </form>
 
                 </div>
+
+
+
+
+                
+
+               
             </div>
 
-            <!-- Settings Dropdown -->
+            <!-- Settings Dropdown 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
@@ -57,8 +60,8 @@
                         </button>
                     </x-slot>
 
-                    <x-slot name="content">
-                        <!-- Authentication -->
+                    <x-slot name="content">-->
+                        <!-- Authentication 
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
@@ -69,9 +72,9 @@
                         </form>
                     </x-slot>
                 </x-dropdown>
-            </div>
+            </div> -->
 
-            <!-- Hamburger -->
+            <!-- Hamburger 
             <div class="-mr-2 flex items-center sm:hidden">
                 <button @click="open = ! open"
                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
@@ -85,7 +88,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
