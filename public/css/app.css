@@ -1354,6 +1354,9 @@ select {
   gap: 2em;
   align-items: flex-start;
 }
+.flex-icons{
+    gap: 1em;
+}
 .title-details{
   color: var(--button-cancel);
 }
@@ -1362,7 +1365,7 @@ select {
   font-weight: 400;
 }
 .head-details{
-  padding: 1em 0 3em 0;
+  padding: 1em 0 2em 0;
 }
 .description-details {
   color: var(--primary-color);
@@ -1370,9 +1373,36 @@ select {
   line-height: 2em;
 }
 
-
-
-
+.modal-body{
+  background-color: var(--background-color);
+}
+.modal-body p{
+  color: var(--primary-color);
+  text-align: center;
+  padding: 2em 0 1em 0;
+}
+.buttons{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1em;
+color: white;
+padding-bottom: 1em;
+}
+.btn-accept{
+  background-color: var(--button-accept);
+}
+.btn-cancel {
+  background-color: var(--button-cancel);
+}
+.button{
+  width: 6em;
+  padding: 0.4em 0;
+}
+div.modal-width{
+  width: 400px;
+  margin-top: 10em;
+}
 
 
 
