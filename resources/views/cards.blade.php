@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-   <!-- <link href="{{ asset('css/songs.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap">-->
+    <link href="{{ asset('css/cards.css')}}" rel="stylesheet">
+   
 </head>
 <body>
     <header>
@@ -40,13 +40,15 @@
                 <th>Description</th>
             </tr>
         </thead>
-        <tbody class="celdas-container">
+        <tbody class = grid-container>
             @foreach ($cards as $card)
-                <tr>
+                <tr class = "card-container">
                     <td>{{ $card->id}}</td>
-                    <td><img class = "album-image" src="{{ $card->image }}" alt="{{ $card->title }}" width="100"></td>
-                    <td class = "song-title">{{ $card->title }}</td>
-                    <td class = "song-album">{{ $card->description }}</td>
+                    <td >
+                        <td><img class = "image-card" src="{{ $card->image }}" alt="{{ $card->title }}"></td>
+                        <td class = "card-title">{{ $card->title }}</td>
+                        <td class = "card-description">{{ $card->description }}</td>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

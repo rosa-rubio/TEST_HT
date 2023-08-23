@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 100px;
+}
+.card-container {
+    display: flex;
+    width: 300px;
+    flex-direction:column;
+    font-family: "Jaldi";
+    color: #0079FF;
+    background-color:#FBFDCE;
+    margin-left: 30px;
+    border-radius: 0px 0px 20px 20px;
+   
+}
+.image-card {
+    width: 300px;
+}
+.card-title {
+    font-weight: 700;
+    font-size: 25px;
+    padding: 0px 0px 0px 20px;
+}
+
+.card-description {
+    font-weight: 400;
+    font-size: 20px;
+    padding: 0px 0px 10px 20px;
+
+}
+
+
+
+
