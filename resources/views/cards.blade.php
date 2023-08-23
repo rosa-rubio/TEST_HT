@@ -47,7 +47,6 @@
                     <td><img class = "album-image" src="{{ $card->image }}" alt="{{ $card->title }}" width="100"></td>
                     <td class = "song-title">{{ $card->title }}</td>
                     <td class = "song-album">{{ $card->description }}</td>
-
                 </tr>
             @endforeach
         </tbody>
