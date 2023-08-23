@@ -3,7 +3,7 @@ use App\Http\Controllers\FormAddNewCardController;
 
 use Illuminate\Support\Facades\Route;
 
-
+use App\Http\Controllers\CardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,12 +19,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/cards', [CardController::class, 'index'])->name('cards');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
 
 Route::resource('formAddNewCard', FormAddNewCardController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
     
 require __DIR__.'/auth.php';
+

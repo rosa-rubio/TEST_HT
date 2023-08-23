@@ -408,6 +408,17 @@
     <div class="align-right bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500">Register</a>
     </div>
+
+    <section class = "playlist-container">
+
+<div class = "green-play-button">
+    <img src="{{ asset('images/play.svg') }}" alt="boton de reproduccion en color verde">
+</div>
+<div class = "table-container">
+<p>La tabla</p>
+
+
+
 </body>
 
 </html>
