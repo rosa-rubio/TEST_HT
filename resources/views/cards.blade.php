@@ -19,7 +19,7 @@
         <div class="nav-bar-right-div">
             <!-- Search Input -->
             <div class="nav-bar-search-input-container">
-                <form class="search-input" action="search.php" method="GET">
+                <form class="search-input" action="{{ route('searchGuest') }}" method="GET">
                     <input class="search" placeholder="Search..." type="text" name="query">
                     <button value='Search' class="search-button" type="submit"><img
                             src="{{ asset('assets/Glass-icon.svg') }}"></button>

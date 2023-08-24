@@ -13,7 +13,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <!--<link rel="stylesheet" href="{{ asset('css/navigation-blade.css') }}">-->
+    <link rel="stylesheet" href="{{ asset('css/cards.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home-navbar.css') }}">
 
     <!-- Scripts -->
@@ -24,7 +24,7 @@
     @include('layouts.home-navbar')
     <!-- Page Heading -->
     <header class="guest-header">
-        <div class= "div-incognito">
+        <div class="div-incognito">
             {{ $header ?? '' }}
         </div>
     </header>
