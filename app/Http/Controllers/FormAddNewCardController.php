@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\FormAddNewCard;
+use App\Models\Card;
+
 use Illuminate\Http\RedirectResponse;
 
 use Illuminate\Http\Request;

@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\FormAddNewCard;
+use Illuminate\View\View;
+
 
 
 use App\Models\Card;
@@ -14,12 +17,13 @@ class CardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): View
     {
-        //
+        
         $cards = Card::all();
-        return view('cards', compact ('cards'));
-    
+        $formAddNewCards = FormAddNewCard::latest()->get();
+        
+        return view('cards', compact('cards', 'formAddNewCards'));    
     }
 
     
