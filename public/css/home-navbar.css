@@ -1,0 +1,53 @@
+.home-register-container{
+    height: 9rem;
+    background-color: white;
+    width: 90%;
+    height: 94px;
+    margin-left: 2vw;
+    margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #0079FF solid 0.5px;
+}
+
+.logo {
+    margin-left: 70px;
+    height: 100%;
+}
+
+.nav-bar-logo-container img {
+height: 78px;;
+width: 165px;;    
+align-content: flex-end;
+
+
+}
+.nav-bar-right-div{
+    height: 100% ;
+    display:flex;
+    width:25%;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-right: 70px;
+    align-content: flex-end;
+}
+.search{
+    background-color: #FBFDCE;
+    color: #0079FF;
+    border-radius: 22px;
+    border:none;
+    width: 200px;
+    height: 40px;
+}
+
+.search-button{
+    background-image: url(/public/assets/Glass-icon.svg);
+    border:none;
+    background-color:transparent;
+}
+
+
+
+.register-button{
+    background-image: url(/public/assets/Avatar-icon.svg);
+}
