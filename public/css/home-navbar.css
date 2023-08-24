@@ -1,44 +1,47 @@
+header {
+    margin:0px;
+    padding:0px;
+    
+}
+
 .home-register-container{
-    height: 9rem;
-    background-color: white;
-    width: 90%;
-    height: 94px;
-    margin-left: 2vw;
-    margin-top: 41px;
+    background-color:white;
     display: flex;
+    width: 90%;
+    height: 10%;
+    margin: 0em auto;
     justify-content: space-between;
     border-bottom: #0079FF solid 0.5px;
+    align-items: center;
 }
 
 .logo {
-    margin-left: 70px;
-    height: 100%;
+    height: 65%;
 }
 
-.nav-bar-logo-container img {
-height: 78px;;
-width: 165px;;    
-align-content: flex-end;
-
-
-}
 .nav-bar-right-div{
     height: 100% ;
     display:flex;
-    width:25%;
+    width:60%;
     justify-content: space-around;
     margin-top: 50px;
-    margin-right: 70px;
-    align-content: flex-end;
+    margin-right:0px;
 }
-.search{
+.search {
     background-color: #FBFDCE;
     color: #0079FF;
     border-radius: 22px;
     border:none;
     width: 200px;
     height: 40px;
+    padding-left: 10px;
 }
+
+::placeholder {
+    color: #0079FF; /* Cambia el color del placeholder a rojo */
+}
+
+
 
 .search-button{
     background-image: url(/public/assets/Glass-icon.svg);
@@ -46,7 +49,12 @@ align-content: flex-end;
     background-color:transparent;
 }
 
+.nav-bar-search-input-container{
+    width: 2%;
+    display:flex;
+    flex-direction: row;
 
+}
 
 .register-button{
     background-image: url(/public/assets/Avatar-icon.svg);
