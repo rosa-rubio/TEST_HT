@@ -1,4 +1,6 @@
 <x-app-layout>
+
+<div class = "giant-div">
     <div class="grid-container">
         @foreach ($form_add_new_cards as $form_add_new_card)
         <div>
@@ -59,7 +61,7 @@
             </div>
         </div>
         @endforeach
-        <div class="grid-container">
+        <div class = "grid-container">
         @php
         $cardsPerPage = 8;
         $currentPage = request()->query('page', 1);
@@ -90,6 +92,7 @@
             @endfor
     </div>
     </div>
+</div>
 
 
 </x-app-layout>

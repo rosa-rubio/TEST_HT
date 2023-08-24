@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ asset('css/navigation-blade.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home-navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+    <link href="{{ asset('css/cards.css')}}" rel="stylesheet">
 
 
     <!-- Scripts -->
@@ -36,7 +37,7 @@
 
         <!-- Page Heading -->
         <header class="bg-white">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div >
                 {{ $header ?? '' }}
 
 
