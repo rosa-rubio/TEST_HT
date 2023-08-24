@@ -59,5 +59,37 @@
             </div>
         </div>
         @endforeach
+        <div class="grid-container">
+        @php
+        $cardsPerPage = 8;
+        $currentPage = request()->query('page', 1);
+
+        $combinedCards = $cards->concat($form_add_new_cards);
+        $totalPages = ceil($combinedCards->count() / $cardsPerPage);
+        $startIndex = ($currentPage - 1) * $cardsPerPage;
+        $slicedCards = $combinedCards->slice($startIndex, $cardsPerPage);
+        @endphp
+
+        @foreach ($slicedCards as $card)
+        <div class="card-container">
+            <div class="image-container">
+                @if ($card instanceof App\Models\FormAddNewCard)
+                <img class="image-card" src="{{ asset('storage/' . $card->image) }}" alt="Image">
+                @else
+                <img class="image-card" src="{{ $card->image }}" alt="{{ $card->title }}">
+                @endif
+            </div>
+            <h3 class="card-title">{{ $card->title }}</h3>
+            <h4 class="card-location">{{ $card->location }}</h4>
+        </div>
+        @endforeach
     </div>
+
+    <div class="pagination">
+        @for ($page = 1; $page <= $totalPages; $page++) <a href="?page={{ $page }}">{{ $page }}</a>
+            @endfor
+    </div>
+    </div>
+
+
 </x-app-layout>

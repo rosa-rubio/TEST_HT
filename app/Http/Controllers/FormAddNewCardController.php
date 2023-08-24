@@ -21,9 +21,14 @@ class FormAddNewCardController extends Controller
     }
     public function dashboard(): View
     {
-                 return view('dashboard', [
+        $cards = Card::all();
+        $form_add_new_cards = FormAddNewCard::with('user')->latest()->get();
+        
+        return view ('dashboard', compact('cards', 'form_add_new_cards'));
+
+            /*     return view('dashboard', [
             'form_add_new_cards' => FormAddNewCard::with('user')->latest()->get(),
-        ]);
+        ]);*/
     }
     public function details(FormAddNewCard $formAddNewCard): View
 {
