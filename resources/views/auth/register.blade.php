@@ -12,7 +12,7 @@
         <p class="txt_line color">Registro de usuario</p>
         <!-- Name -->
         <div>
-            <x-label for="name" :value="__('Nombre')" />
+            <x-label for="name" :value="__('Nombre')" class="label"/>
 
             <x-input class="input colored-value" id="name"  type="text" name="name" :value="old('name')" required autofocus
                 placeholder="Escribe tu nombre..." />
@@ -20,7 +20,7 @@
 
         <!-- Email Address -->
         <div>
-            <x-label for="email" :value="__('E-Mail')" />
+            <x-label for="email" :value="__('E-Mail')" class="label" />
 
             <x-input class="input colored-value" id="email"  type="email" name="email" :value="old('email')" required
                 placeholder="Escribe tu e-mail..." />
@@ -28,7 +28,7 @@
 
         <!-- Password -->
         <div >
-            <x-label for="password" :value="__('Contraseña')" />
+            <x-label for="password" :value="__('Contraseña')" class="label" />
 
             <x-input class="input colored-value" id="password"  type="password" name="password" required
                 autocomplete="new-password" placeholder="Escribe tu contraseña..." />

@@ -34,6 +34,10 @@ form{
     padding: 20px;
       
 }
+.label{
+    color: #0079ff;
+    font-weight: bold;
+}
 .input {
     justify-content: center;
     border: 1px solid #ccc;
