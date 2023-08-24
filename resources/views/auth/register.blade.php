@@ -5,43 +5,44 @@
 
     <!-- Validation Errors -->
     <x-auth-validation-errors class="mb-4" :errors="$errors" />
-    <p class="underline">Registro de usuario</p>
+    <div class="form-border">
+    
     <form method="POST" action="{{ route('register') }}">
         @csrf
-
+        <p class="txt_line color">Registro de usuario</p>
         <!-- Name -->
         <div>
             <x-label for="name" :value="__('Nombre')" />
 
-            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus
+            <x-input class="input colored-value" id="name"  type="text" name="name" :value="old('name')" required autofocus
                 placeholder="Escribe tu nombre..." />
         </div>
 
         <!-- Email Address -->
-        <div class="mt-4">
+        <div>
             <x-label for="email" :value="__('E-Mail')" />
 
-            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
+            <x-input class="input colored-value" id="email"  type="email" name="email" :value="old('email')" required
                 placeholder="Escribe tu e-mail..." />
         </div>
 
         <!-- Password -->
-        <div class="mt-4">
+        <div >
             <x-label for="password" :value="__('Contraseña')" />
 
-            <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
+            <x-input class="input colored-value" id="password"  type="password" name="password" required
                 autocomplete="new-password" placeholder="Escribe tu contraseña..." />
         </div>
 
 
 
-        <div class="flex items-center justify-end mt-4">
-            <div class="flex items-center justify-end mt-4">
+        <div>
+            <div class="btn-container">
 
-                <button class="ml-4 btn-register" >
+                <button class="btn-aceptar button" >
                     {{ __('Aceptar') }}
                 </button>
-                <button class="ml-4 btn-aceptar" >
+                <button class="btn-cancelar button" >
                     <a href="/">
                         Cancelar
                     </a>
@@ -56,5 +57,6 @@
         </p>
 
     </form>
+    </div>
 
 </x-guest-layout>

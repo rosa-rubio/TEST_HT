@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
-    
 .color{
     color: #ff0060;
     font-weight: bold;
     padding-top: 5px;
     padding-bottom: 15px;
 }
+
 .txt_line  {
     position: relative; 
     display: flex;
@@ -22,7 +22,6 @@
 }
 
 
-
 form{
     display:flex;
     flex-direction: column;
@@ -30,31 +29,13 @@ form{
     border: solid 3px #fbfdce;
     border-radius: 20px;
     margin: auto;
-    height: 375px;
+    height: 300px;
     width: 275px;
     padding: 20px;
       
 }
-
-.p2{
-color:#0079ff;
-padding-top: 15px;
-}
-
-.p2 a{
-    text-decoration: none;
-    color: #00dfa2;
-}
-
-
-
-form label {
-    border-radius: 20%;
-    display: block; 
-    margin-bottom: 10px; 
-    
-}
 .input {
+    justify-content: center;
     border: 1px solid #ccc;
     padding: 5px;
     margin: 5px;
@@ -62,35 +43,33 @@ form label {
     background: #fbfdce;
     color: #0079ff;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25) inset;
-
 }
-.colored-value{
-    color:#0079ff;
+input::placeholder{
+    color: #0079ff;
 }
 
-.button {
+.btn-aceptar{
+    background-color: #00dfa2; 
+    border-top: 2em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 6px 17px;
+    color:white;   
+ }
+ .btn-cancelar{
+    background-color: #ff0060;
     border-top: 2em;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     padding: 6px 17px;
     color:white; 
-}
-.btn-aceptar{
-    background-color: #00dfa2;   
- }
- .btn-cancelar{
-     background-color: #ff0060;
  }
 .btn-container{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 10px;
     margin-right: 15px;
+    
 }
-input::placeholder{
-    color: #0079ff;
-}
-input::target-text{
-    color: #0079ff;
-}
- 
