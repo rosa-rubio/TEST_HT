@@ -16,7 +16,7 @@ class CreateFormAddNewCardsTable extends Migration
         Schema::create('form_add_new_cards', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->text('description');
+            $table->text('description')->limit(500);
             $table->string('title');
             $table->string('location');
             $table->string('image');
