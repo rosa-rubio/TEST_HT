@@ -16,12 +16,6 @@ class CardSeeder extends Seeder
      */
     public function run()
     {
-        /*Card::create([
-            'image' => 'https://www.mondosonoro.com/wp-content/uploads/2020/10/Woodkid-S16-disco.jpg',
-            'title' => 'Fun Vacation',
-            'location' => 'Puerto Rico',
-            'description' => 'Playa, sol y Arena'
-        ]);*/
 
         $cards = [
             [
@@ -50,7 +44,7 @@ class CardSeeder extends Seeder
                 'location' => 'Kenia',
                 'description' => 'Sientes la llamada de la naturaleza mientras elefantes y leones vagan libremente a tu alrededor. Esta experiencia vale absolutamente la pena cada segundo y una aventura para toda la vida'
             ],
-
+            
             [
                 'image' => 'https://s1.abcstatics.com/media/viajar/2018/04/25/rodas-kK6B--510x349@abc.jpg',
                 'title' => 'Escapada Soñada',
@@ -78,14 +72,12 @@ class CardSeeder extends Seeder
                 'location' => 'Maldivas',
                 'description' => 'Despertarse con el runrún del mar en su idílico bungaló en las Maldivas dará vida a la realidad tropical'
             ],
-
             [
                 'image' => 'https://ospreyexpeditions.com/wp-content/uploads/2021/09/Angel-Falls-Orinoco-Delta-Venezuela-Tours-Wanderreds-Isla-Margarita-2-e1632625651636.jpg',
                 'title' => 'Salto Angel, una maravilla natural',
                 'location' => 'Venezuela',
                 'description' => 'El Salto Ángel es una de las mayores atracciones turísticas de Venezuela. Su sola visión te dejará sin aliento. Una experiencia indescriptible que debes vivir'
             ],
-
             [
                 'image' => 'https://s1.abcstatics.com/media/viajar/2018/04/25/galapagos-kK6B--510x349@abc.jpg',
                 'title' => 'Islas Galapagos, el origen de las especies',
@@ -99,9 +91,10 @@ class CardSeeder extends Seeder
                 'location' => 'Perú',
                 'description' => 'Pasear por el Camino Inca es un intenso viaje a siglos pasados y a las raíces de nuestra historia que permanecen vivas hasta el día de hoy'
             ]
-            
-        ];
-            
+
+            ];
+          
         DB::table('cards')->insert($cards);
+        
     }
 }
