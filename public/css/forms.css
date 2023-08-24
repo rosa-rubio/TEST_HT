@@ -218,3 +218,53 @@ input#image {
 #error-description{
     margin: 1em;
 }
+@media (max-width: 415px) {
+    div.container{
+                width: 95% !important;
+    }
+    div.modal-dialog{
+        width: 95%;
+    }
+    div.flex{
+        flex-direction: column;
+        width: 100%;
+    }
+    .image-container{
+        width: 23.5em;
+        height: 23.5em;
+    }
+}
+/* 
+
+
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    align-items: flex-start;
+}
+
+.flex-icons {
+    gap: 1em;
+}
+
+.title-details {
+    color: var(--button-cancel);
+    font-weight: 700;
+}
+
+.location-details {
+    color: var(--button-cancel);
+    font-weight: 400;
+}
+
+.head-details {
+    padding: 1em 0 1.5em 0;
+}
+
+.description-details {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    line-height: 1.6em;
+} */

@@ -26,7 +26,7 @@
 }
 
 
-form{
+form.register{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +37,7 @@ form{
     width: 275px;
     padding: 20px;
       
-}
+} 
 
 .p2{
 color:#0079ff;
@@ -96,4 +96,7 @@ input::placeholder{
 input::target-text{
     color: #0079ff;
 }
- 
+ input{
+    display: block;
+    width: 100%;
+ }
