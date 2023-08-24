@@ -1,36 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
 
+body {
+    box-sizing: border-box;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 100px;
+    grid-template-columns: auto auto auto auto;
+    width: 90%;
+    margin: 0px auto;
+    justify-content: center;
 }
 .card-container {
     display: flex;
     width: 300px;
-    flex-direction:column;
+    flex-direction: column;
     font-family: "Jaldi";
     color: #0079FF;
-    background-color:#FBFDCE;
-    margin-left: 30px;
-    border-radius: 0px 0px 20px 20px;
+    background-color: #FBFDCE;
+    margin: 20px 15px;
+    border-radius: 20px;
    
 }
-.image-card {
+.image-container {
     width: 300px;
-    border-radius: 20px 20px 20px 20px;
+    height: 300px;
+    position: relative;
+    border-radius: 1.5em;
+    overflow: hidden;
+  }
+
+.image-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5em;
 
 }
 .card-title {
     font-weight: 700;
     font-size: 25px;
     padding: 0px 0px 0px 20px;
+    margin: 10px 0px 0px 0px;
 }
 
-.card-description {
+.card-location {
     font-weight: 400;
     font-size: 20px;
     padding: 0px 0px 10px 20px;
+    margin: 10px 0px 5px 0px;
 
 }
 

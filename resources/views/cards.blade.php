@@ -15,13 +15,19 @@
     </div>
 </header>
     <div class = "grid-container">
+            @php $cardCount = 0 @endphp
             @foreach ($cards as $card)
+            @if ($cardCount < 8)
                 <div class = "card-container">
-                        <img class = "image-card" src="{{ $card->image }}" alt="{{ $card->title }}">
+                        <div class= "image-container"><img class = "image-card" src="{{ $card->image }}" alt="{{ $card->title }}"></div>
                         <h3 class = "card-title">{{ $card->title }}</h3>
-                        <h4 class = "card-description">{{ $card->description }}</h4>
+                        <h4 class = "card-location">{{ $card->location }}</h4>
                 </div>
-            @endforeach
+                @php $cardCount++ @endphp
+        @else
+                @break
+            @endif
+        @endforeach
     </div>
 </body>
 </html>
