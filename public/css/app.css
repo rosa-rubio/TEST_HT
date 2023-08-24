@@ -34,8 +34,8 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
-  font-feature-settings: normal; /* 5 */
+font-family: 'Jaldi', sans-serif;  
+font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
 }
 
@@ -74,7 +74,7 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -82,7 +82,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
-}
+} */
 
 /*
 Reset links to optimize for opt-in styling instead of opt-out.
@@ -328,14 +328,13 @@ textarea {
 
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1; /* 1 */
-  color: #9ca3af; /* 2 */
+  color: var(--primary-color);
 }
 
 input::placeholder,
 textarea::placeholder {
   opacity: 1; /* 1 */
-  color: #9ca3af; /* 2 */
-}
+color: var(--primary-color);}
 
 /*
 Set the default cursor for buttons.
@@ -371,15 +370,6 @@ object {
   vertical-align: middle; /* 2 */
 }
 
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 [hidden] {
@@ -390,10 +380,9 @@ video {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #fff;
-  border-color: #6b7280;
-  border-width: 1px;
-  border-radius: 0px;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 1em;
   padding-top: 0.5rem;
   padding-right: 0.75rem;
   padding-bottom: 0.5rem;
@@ -413,17 +402,14 @@ video {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  border-color: #2563eb;
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #6b7280;
-  opacity: 1;
+  color: var(--primary-color);
 }
 
 input::placeholder,textarea::placeholder {
-  color: #6b7280;
-  opacity: 1;
+  color: var(--primary-color);
 }
 
 ::-webkit-datetime-edit-fields-wrapper {
@@ -539,16 +525,16 @@ select {
 
 [type='file'] {
   background: unset;
-  border-color: inherit;
+  border-color: var(--background-color);
   border-width: 0;
-  border-radius: 0;
+  border-radius: 50%;
   padding: 0;
   font-size: unset;
   line-height: inherit;
 }
 
 [type='file']:focus {
-  outline: 1px auto -webkit-focus-ring-color;
+  outline: none;
 }
 
 *, ::before, ::after {
@@ -791,6 +777,12 @@ select {
 }
 .w-full {
   width: 100%;
+}
+.w-75{
+  width: 75%;
+}
+.w-50 {
+  width: 50%;
 }
 .max-w-6xl {
   max-width: 72rem;
@@ -1326,6 +1318,179 @@ select {
 .disabled\:opacity-25:disabled {
   opacity: 0.25;
 }
+
+/* details page styles */
+:root {
+  --primary-color: rgba(0, 121, 255, 1);
+  --button-accept: rgba(0, 223, 162, 1);
+  --button-cancel: rgba(255, 0, 96, 1);
+  --background-color: rgba(251, 253, 206, 1);
+}
+.image-container {
+  width: 50%;
+  padding-bottom: 50%;
+  position: relative;
+  border-radius: 1.5em;
+  overflow: hidden;
+}
+
+.img-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  align-items: flex-start;
+}
+.flex-icons{
+    gap: 1em;
+}
+.title-details{
+  color: var(--button-cancel);
+}
+.location-details {
+  color: var(--button-cancel);
+  font-weight: 400;
+}
+.head-details{
+  padding: 1em 0 2em 0;
+}
+.description-details {
+  color: var(--primary-color);
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+.modal-body{
+  background-color: var(--background-color);
+}
+.modal-body p{
+  color: var(--primary-color);
+  text-align: center;
+  padding: 2em 0 1em 0;
+}
+.buttons{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1em;
+padding-bottom: 1em;
+}
+.btn-accept{
+  background-color: var(--button-accept);
+}
+.btn-cancel {
+  background-color: var(--button-cancel);
+}
+.button{
+  width: 6em;
+  color: white;
+  padding: 0.4em 0;
+  font-weight: 700;
+}
+div.modal-width{
+  width: 400px;
+  margin-top: 10em;
+}
+/* form edit card styles */
+
+form.form{
+  border: 0.2em solid var(--background-color);
+  border-radius: 1em;
+  padding: 2em;
+  background-color: white;
+  width: 65%;
+  margin: 0 auto;
+}
+
+form a
+{
+  text-decoration: none;
+  color: inherit;
+}
+.box-line{
+  width: 100%;
+  border-bottom: 1px red solid;
+}
+.box-line h3{
+color: var(--button-cancel);
+text-align: center;
+font-weight: 700;
+}
+.form label {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.1em;
+    margin-top: 2em;
+}
+.box-half{
+  width: 50%;
+}
+form input, textarea{
+  color: var(--primary-color);
+  border-radius: 2em !important;
+  padding: 1em;
+    line-height: 2em !important;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25) inset;
+    width: 100%;
+}
+form.form textarea{
+      box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25) inset !important;
+}
+textarea{
+  padding: 1em;
+  line-height: 2em !important;
+}
+form input[type="text"]{
+  padding-left: 1em !important;
+}
+form input[type="file"] {
+  margin: 2em 0;
+}
+.buttons-end{
+  margin-top: 7em;
+  display: flex;
+  gap: 1em;
+}
+
+
+.flexbox-file{
+display: flex;
+width: 100%;
+cursor: pointer;
+}
+label>input[type="file"]{
+  cursor: pointer;
+}
+.file{
+  background-color:  var(--primary-color);
+  padding: 0.65em 1em;
+  border-radius: 2em 0 0 2em;
+}
+.file-text{
+  background-color: var(--background-color);
+  padding: 0.6em;
+  font-weight: 400;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 0 2em 2em 0;
+  padding-right: 7.5em;
+}
+input.hidden {
+  display: none;
+}
+
+
+
+
+
+
 @media (prefers-color-scheme: dark) {
 
   .dark\:border-gray-700 {

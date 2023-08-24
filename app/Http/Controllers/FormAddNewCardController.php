@@ -48,7 +48,7 @@ class FormAddNewCardController extends Controller
     public function store(Request $request): RedirectResponse
     {
                 $validated = $request->validate([
-            'description' => 'required|string|max:255',
+            'description' => 'required|string|max:500',
             'title' => 'required|string|max:255',
             'location' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
@@ -102,7 +102,7 @@ class FormAddNewCardController extends Controller
                 $this->authorize('update', $formAddNewCard);
  
         $validated = $request->validate([
-            'description' => 'required|string|max:255',
+            'description' => 'required|string|max:500',
             'title' => 'required|string|max:255',
             'location' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif', 
