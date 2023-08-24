@@ -1,7 +1,17 @@
 <x-app-layout>
 
-<div class = "giant-div">
     <div class="grid-container">
+
+    @php
+        $cardsPerPage = 8;
+        $currentPage = request()->query('page', 1);
+
+        $combinedCards = $cards->concat($form_add_new_cards);
+        $totalPages = ceil($combinedCards->count() / $cardsPerPage);
+        $startIndex = ($currentPage - 1) * $cardsPerPage;
+        $slicedCards = $combinedCards->slice($startIndex, $cardsPerPage);
+        @endphp
+
         @foreach ($form_add_new_cards as $form_add_new_card)
         <div>
             <div>
@@ -56,21 +66,13 @@
                     </div>
                     @endif
 
-
                 </div>
+                        
             </div>
         </div>
-        @endforeach
-        <div class = "grid-container">
-        @php
-        $cardsPerPage = 8;
-        $currentPage = request()->query('page', 1);
 
-        $combinedCards = $cards->concat($form_add_new_cards);
-        $totalPages = ceil($combinedCards->count() / $cardsPerPage);
-        $startIndex = ($currentPage - 1) * $cardsPerPage;
-        $slicedCards = $combinedCards->slice($startIndex, $cardsPerPage);
-        @endphp
+        @endforeach
+
 
        @foreach ($slicedCards as $card)
         <div class="card-container">
@@ -85,12 +87,15 @@
             <h4 class="card-location">{{ $card->location }}</h4>
         </div>
         @endforeach
-    </div>
 
-    <div class="pagination">
+        <!--<div class="pagination">
         @for ($page = 1; $page <= $totalPages; $page++) <a href="?page={{ $page }}">{{ $page }}</a>
             @endfor
+        </div>-->
+        
     </div>
+
+    
     </div>
 </div>
 
