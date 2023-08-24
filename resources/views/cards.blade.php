@@ -60,7 +60,7 @@
 
         @foreach ($slicedCards as $card)
         <div class="card-container">
-            <div class="image-container">
+            <div class="img-container">
                 @if ($card instanceof App\Models\FormAddNewCard)
                 <img class="image-card" src="{{ asset('storage/' . $card->image) }}" alt="Image">
                 @else
