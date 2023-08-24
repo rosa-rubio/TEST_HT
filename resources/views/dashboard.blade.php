@@ -72,7 +72,7 @@
         $slicedCards = $combinedCards->slice($startIndex, $cardsPerPage);
         @endphp
 
-        @foreach ($slicedCards as $card)
+       @foreach ($slicedCards as $card)
         <div class="card-container">
             <div class="image-container">
                 @if ($card instanceof App\Models\FormAddNewCard)
