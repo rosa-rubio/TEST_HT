@@ -18,17 +18,38 @@ body {
     font-family: "Jaldi";
     color: #0079FF;
     background-color: #FBFDCE;
-    margin: 1.25em 0.93em;
+    margin: 1.25em 0.938em;
     border-radius: 1.25em;
    
 }
+
 .image-container {
+    display:flex;
     width: 18.75em;
     height: 18.75em;
     position: relative;
     border-radius: 1.5em;
     overflow: hidden;
   }
+
+.container-ud{
+    display: flex;
+    padding: 1.25em;
+    justify-content: space-between;
+    
+}
+
+.icon-info {
+    display: flex;
+    z-index: 1;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 0.625em 0.625em 0em 0em;
+}
+
+.info{
+    height: 3rem;
+}
 
 .image-card {
     width: 100%;
@@ -39,23 +60,27 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 1.5em;
-
 }
+
 .card-title {
     font-weight: 700;
     font-size: 25px;
-    padding: 0em 0em 0em 1.25em;
-    margin: 0.625em 0em 0em 0em;
-}
+} 
 
 .card-location {
     font-weight: 400;
     font-size: 20px;
-    padding: 0px 0px 0.625em 1.25em;
-    margin: 0.625em 0em 0.313em 0em;
 
 }
 
+.icons-ud {
+    display: flex;
+    align-items: center;
+    width: 5em;
+    justify-content: space-between;
+}
 
-
-
+.text-container {
+    display: flex;
+    flex-direction: column;
+}

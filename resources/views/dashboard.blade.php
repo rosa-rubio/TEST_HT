@@ -1,31 +1,31 @@
 <x-app-layout>
-    <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
+    <div class="grid-container">
         @foreach ($form_add_new_cards as $form_add_new_card)
-        <div class="p-6 flex space-x-2">
-            <div class="flex-1">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <img src="{{ asset('storage/' . $form_add_new_card->image) }}" alt="Image">
+        <div>
+            <div>
+                <div class="card-container">
+                    <div class="image-container" >
+                        <img class="image-card" src="{{ asset('storage/' . $form_add_new_card->image) }}" alt="Image">
+                        <a class="icon-info" href="{{ route('details', $form_add_new_card) }}">
+                             <img class="info" src="{{ asset('assets/Info-icon.svg') }} " alt="Mostrar mas info"></a>
                     </div>
-
-                    <div>
-                        <span class="text-gray-800">{{ $form_add_new_card->title }}</span>
-                    </div>
-                    <div>
-                        <span class="text-gray-800">{{ $form_add_new_card->location }}</span>
+                <div class="container-ud">
+                    <div class="text-container">
+                        <span class="card-title">{{ $form_add_new_card->title }}</span>
+                        <span class="card-location">{{ $form_add_new_card->location }}</span>
                     </div>
 
                     @if ($form_add_new_card->user->is(auth()->user()))
-                    <div class="flex flex-icons">
-                        <a href="{{ route('details', $form_add_new_card) }}"
-                            class="text-indigo-600 hover:text-indigo-900">
-                            <img src="{{ asset('assets/Info-icon.svg') }} " alt="Mostrar mas info"></a>
+                    <div class="icons-ud">
+                        
                         <a href="{{ route('formAddNewCard.edit', $form_add_new_card) }}"
-                            class="text-indigo-600 hover:text-indigo-900"><img src="{{ asset('assets/Edit-icon.svg') }}"
+                            class="text-indigo-600 hover:text-indigo-900">
+                            <img src="{{ asset('assets/Edit-icon.svg') }}"
                                 alt="Editar"></a>
                         <button type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <img src="{{ asset('assets/Delete-icon.svg') }}" alt="Borrar">
                         </button>
+                    </div>
 
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
