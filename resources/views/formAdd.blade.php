@@ -9,24 +9,27 @@
             <div class="box-half">
                 <label for="title" value="__('Título')">Título
                 </label>
-                <x-input id="title" class="block mt-1 w-full" type="text" name="title" required autofocus
+                <input id="title" class="block mt-1 w-full" type="text" name="title" required
                     placeholder="Escribe el título..." />
 
                 <label for="location" value="__('Ubicación')">Ubicación</label>
 
-                <input id="location" class="block mt-1 w-full" type="text" name="location" required autofocus
+                <input id="location" class="block mt-1 w-full" type="text" name="location" required
                     placeholder="Escribe la ubicación..." />
 
-                <label for="image">
+                <label for="image" class="input-absolute">
                     Imagen
-                    <div class="flexbox-file">
-                        <div class="file"><img src="{{ asset('assets/File-icon.svg') }}" alt="Elegir file"></div>
-                        <div class="file-text">Sube
-                            una imagen...</div>
-                    </div>
+                    <img class="file" src="{{ asset('assets/File-icon.svg') }}" alt="Elegir file">
 
-                    <input id="image" class="hidden" type="file" name="image" autofocus />
+                    <input id="image" type="file" name="image" />
+
                 </label>
+                <div class="file-text" id="file-text">
+
+                    Sube una imagen...
+
+                </div>
+
 
 
                 <div class="buttons-end">
@@ -47,4 +50,17 @@
             </div>
         </div>
     </form>
+    <script>
+    document.getElementById('image').addEventListener('change', function() {
+        const fileText = document.getElementById('file-text');
+        const input = this;
+
+        if (input.files && input.files[0]) {
+            const filename = input.files[0].name;
+            fileText.textContent = filename;
+        } else {
+            fileText.textContent = 'Sube una imagen...';
+        }
+    });
+    </script>
 </x-app-layout>
