@@ -4,8 +4,8 @@
         <div>
             <div>
                 <div class="card-container">
-                    <div class="image-container" >
-                        <img class="image-card" src="{{ asset('storage/' . $form_add_new_card->image) }}" alt="Image">
+                    <div class="container-image" >
+                        <img class="card-image" src="{{ asset('storage/' . $form_add_new_card->image) }}" alt="Image">
                         <a class="icon-info" href="{{ route('details', $form_add_new_card) }}">
                              <img class="info" src="{{ asset('assets/Info-icon.svg') }} " alt="Mostrar mas info"></a>
                     </div>
