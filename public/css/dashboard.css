@@ -10,12 +10,13 @@ body {
 
 }
 
-.grid-container {
+div.grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
     width: 90%;
     margin: 0em auto;
-    justify-content: center;
+    justify-content: center; 
+    
 }
 .card-container {
     display: flex;
@@ -26,6 +27,7 @@ body {
     background-color: #FBFDCE;
     margin: 1.25em 0.938em;
     border-radius: 1.25em;
+    position: relative;
    
 }
 
@@ -50,7 +52,9 @@ body {
     z-index: 1;
     width: 100%;
     justify-content: flex-end;
-    padding: 0.625em 0.625em 0em 0em;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
 }
 
 .info{
@@ -72,11 +76,18 @@ body {
     font-weight: 700;
     font-size: 25px;
 } 
+.dashboard-title {
+    font-weight: 700;
+    font-size: 25px;
+}
 
 .card-location {
     font-weight: 400;
     font-size: 20px;
-
+}
+.dashboard-location {
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .icons-ud {
@@ -86,7 +97,7 @@ body {
     justify-content: space-between;
 }
 
-.text-container {
+/* .text-container {
     display: flex;
     flex-direction: column;
-}
+} */
