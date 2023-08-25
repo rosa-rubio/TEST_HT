@@ -63,12 +63,13 @@
             <div class="img-container">
                 <img class="image-card" src="{{ $card->image }}" alt="{{ $card->title }}">
             </div>
-            <h3 class="card-title">{{ $card->title }}</h3>
-            <h4 class="card-location">{{ $card->location }}</h4>
+            <div class="text-container-card">
+                <p class="dashboard-title">{{ $card->title }}</p>
+                <p class="dashboard-location">{{ $card->location }}</p>
+            </div>
         </div>
         @endforeach
 
     </div>
-
 
 </x-app-layout>

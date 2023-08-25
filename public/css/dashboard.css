@@ -16,7 +16,7 @@ div.grid-container {
     width: 90%;
     margin: 0em auto;
     justify-content: center; 
-    
+    padding: 2em 0;
 }
 .card-container {
     display: flex;
@@ -97,7 +97,6 @@ div.grid-container {
     justify-content: space-between;
 }
 
-/* .text-container {
-    display: flex;
-    flex-direction: column;
-} */
+.text-container-card{
+    padding: 1.25em;
+}
