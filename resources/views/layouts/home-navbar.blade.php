@@ -5,8 +5,11 @@
     <a href="{{ url('/') }}"> <img class="logo" src="{{ asset('assets/Logo.svg') }}"></a>
 
     <div class="nav-bar-right-div">
-        <!-- Search Input -->
-        <div class="nav-bar-search-input-container">
+       
+
+<div class= "nav-bar-right-div">
+ <!-- Search Input -->
+ <div class="nav-bar-search-input-container">
             <form class="search-input" action="{{ route('searchGuest') }}" method="GET">
                 <input class="search" placeholder="Search..." type="text" name="query">
                 <button value='Search' class="search-button" type="submit"><img
@@ -15,7 +18,6 @@
         </div>
 
         <!--nav links-->
-<div>
         @if (Route::has('login'))
         @auth
         <a class="dashboard-button" href="{{ url('/dashboard') }}"><img src="{{ asset('assets/Avatar-icon.svg') }}"></a>
