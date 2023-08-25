@@ -13,7 +13,7 @@
         </div>
 
         <!--nav links-->
-
+<div>
         @if (Route::has('login'))
         @auth
         <a class="dashboard-button" href="{{ url('/dashboard') }}"><img src="{{ asset('assets/Avatar-icon.svg') }}"></a>
@@ -26,7 +26,7 @@
 
         @endif
         @endauth
-
+        </div>
         @endif
     </div>
 </nav>
