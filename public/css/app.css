@@ -530,6 +530,15 @@ input::placeholder,textarea::placeholder {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.header-guest {
+  width:100%;
+  background-color:red;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 .fixed {
   position: fixed;
 }

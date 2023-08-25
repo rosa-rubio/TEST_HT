@@ -1,4 +1,6 @@
-<nav class='home-register-container' x-data="{ open: false }">
+<nav x-data="{ open: false }">
+
+<header class ='home-register-container'>
     <!-- Primary Navigation Menu Dashboard -->
     <a href="{{ url('/') }}"> <img class="logo" src="{{ asset('assets/Logo.svg') }}"></a>
 
@@ -29,4 +31,5 @@
         </div>
         @endif
     </div>
+</header>
 </nav>
