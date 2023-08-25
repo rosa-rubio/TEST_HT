@@ -15,6 +15,7 @@ header {
     align-items: center;
 }
 
+
 .logo {
     height: 65%;
 }
@@ -23,8 +24,8 @@ header {
     height: 100% ;
     display:flex;
     width:60%;
-    justify-content: space-around;
-    margin-top: 50px;
+    justify-content: flex-end; 
+    align-items: center;
     margin-right:0px;
 }
 .search {
@@ -42,7 +43,6 @@ header {
 }
 
 
-
 .search-button{
     background-image: url(/public/assets/Glass-icon.svg);
     border:none;
@@ -50,12 +50,13 @@ header {
 }
 
 .nav-bar-search-input-container{
-    width: 2%;
+    width: 28%;
     display:flex;
     flex-direction: row;
 
 }
 
 .register-button{
-    background-image: url(/public/assets/Avatar-icon.svg);
+   margin-left:0.3em;
 }
+

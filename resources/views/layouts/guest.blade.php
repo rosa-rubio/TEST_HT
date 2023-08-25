@@ -6,28 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Happy-Travel') }}</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cards.css') }}">
+    <!--<link rel="stylesheet" href="{{ asset('css/cards.css') }}">-->
     <link rel="stylesheet" href="{{ asset('css/home-navbar.css') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
-
 <body>
-    @include('layouts.home-navbar')
+    
     <!-- Page Heading -->
-    <header class="guest-header">
-        <div class="div-incognito">
+   
+    @include('layouts.home-navbar')
+       
             {{ $header ?? '' }}
-        </div>
-    </header>
+        
+    
     <main> {{ $slot }}</main>
 
 </body>

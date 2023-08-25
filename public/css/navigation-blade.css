@@ -28,8 +28,12 @@
     align-items: baseline;
 
 }
+
+.logo {
+    height: 65%;
+}
+
 .dashboard-nav-link-container{
-    border:solid 1px black;
     display: flex;
     justify-content: baseline;
 }
