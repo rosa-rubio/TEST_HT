@@ -13,21 +13,22 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <!--<link rel="stylesheet" href="{{ asset('css/cards.css') }}">-->
+    <link rel="stylesheet" href="{{ asset('css/cards.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home-navbar.css') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
+
 <body>
-    
+
     <!-- Page Heading -->
-   
+
     @include('layouts.home-navbar')
-       
-            {{ $header ?? '' }}
-        
-    
+
+    {{ $header ?? '' }}
+
+
     <main> {{ $slot }}</main>
 
 </body>
