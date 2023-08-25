@@ -74,7 +74,10 @@
     </div>
 
     <div class="pagination">
-        @for ($page = 1; $page <= $totalPages; $page++) <a href="?page={{ $page }}">{{ $page }}</a>
+        @for ($page = 1; $page <= $totalPages; $page++) <a href="?page={{ $page }}"
+            class="{{ $page == $currentPage ? 'current-page' : '' }}">
+            {{ $page }}
+            </a>
             @endfor
     </div>
 
