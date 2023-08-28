@@ -5384,39 +5384,25 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Main = function Main() {
-  // Sets initial state for products to empty array 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState2 = _slicedToArray(_useState, 2),
     cards = _useState2[0],
     setCards = _useState2[1];
-  // Call this function to get products data 
   var getCards = function getCards() {
-    /* fetch API in action */
     fetch('/api/cards/').then(function (response) {
       return response.json();
     }).then(function (cards) {
-      //Fetched product is stored in the state 
       setCards(cards);
     });
   };
-  /*useEffect is a lifecycle hook 
-  * that gets called after the component is rendered 
-  */
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     getCards();
   }, []);
-  // Render the products 
   var renderCards = function renderCards() {
     return cards.map(function (card) {
-      return (
-        /*#__PURE__*/
-        /* When using list you need to specify a key 
-        * attribute that is unique for each list item 
-        */
-        (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-          children: card.title
-        }, card.id)
-      );
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+        children: card.title
+      }, card.id);
     });
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
