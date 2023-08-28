@@ -9,7 +9,8 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <div id="hello-react"></div>
-    <div id="counter"></div>
+    <div id="root"></div>
+    {{-- <div id="hello-react"></div>
+    <div id="counter"></div> --}}
 </body>
 </html>
